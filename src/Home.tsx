@@ -19,7 +19,9 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)``;
+const ConnectButton = styled(WalletDialogButton)`
+
+`;
 
 const CounterText = styled.span``; // add your styles here
 
