@@ -25,9 +25,7 @@ const CounterText = styled.span``; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(Button)`
-  color: red;
-`; // add your styles here
+const MintButton = styled(Button)``; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -169,13 +167,12 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      <div className="poster-wrapper">
+
         <img
           src="mint-graphic.png"
           alt="A couple of spooky souls standing in a circle around a m hidden mystery soul"
         />
-      </div>
-      <p>hello</p>
+
 
       <MintContainer>
         {!wallet ? (
@@ -210,13 +207,10 @@ const Home = (props: HomeProps) => {
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+      {wallet && <p>{`${itemsRemaining}/5000 Souls Remaining`}</p>}
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
+      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL (0.25 per mint)</p>}
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
 
 
 
